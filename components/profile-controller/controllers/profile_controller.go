@@ -517,7 +517,7 @@ func (r *ProfileReconciler) updateServiceAccount(profileIns *profilev1.Profile, 
 }
 
 // updateSecret create minio secret in the target namespace owned by "profileIns"
-func (r *ProfileReconciler) updateSecret(profileIns *profilev1beta1.Profile) error {
+func (r *ProfileReconciler) updateSecret(profileIns *profilev1.Profile) error {
 	logger := r.Log.WithValues("profile", profileIns.Name)
 	secret := &corev1.Secret{
 		ObjectMeta: metav1.ObjectMeta{
